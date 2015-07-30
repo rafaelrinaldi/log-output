@@ -1,7 +1,7 @@
 {
   "name": "print",
   "version": "1.0.0",
-  "description": "Normalize `stdout.write` to work with both Node.js and PhantomJS.",
+  "description": "Normalized standard output that works on both Node.js and PhantomJS environments.",
   "main": "index.js",
   "scripts": {
     "test": "tape test.js"
