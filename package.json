@@ -1,0 +1,31 @@
+{
+  "name": "print",
+  "version": "1.0.0",
+  "description": "Normalize `stdout.write` to work with both Node.js and PhantomJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelrinaldi/print.git"
+  },
+  "keywords": [
+    "print",
+    "string",
+    "message",
+    "log",
+    "stdout",
+    "standardoutput",
+    "write"
+  ],
+  "author": "Rafael Rinaldi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafaelrinaldi/print/issues"
+  },
+  "homepage": "https://github.com/rafaelrinaldi/print#readme",
+  "devDependencies": {
+    "tape": "^4.0.1"
+  }
+}
