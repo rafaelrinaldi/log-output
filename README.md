@@ -21,7 +21,9 @@ Output message.
 
 ## Motivation
 
-I wanted to persist a log message on the REPL but this is not trivial. There's a bunch of weird tricks to simply append a new log entry and keeping the output clean at the same time.  
+I wanted to persist a log message on the REPL but I have discovered that this is not so trivial.
+There's a bunch of weird tricks to simply append a new log entry and keeping the output clean at the same time.  
+
 This module abstracts all these small gotchas so you can focus on what really matters. 
 
 ## License
