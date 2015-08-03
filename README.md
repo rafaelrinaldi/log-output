@@ -14,14 +14,15 @@ $ npm install --save write.js
 
 #### `message`
 
-*Required*
+*Required*  
 Type: `string`  
 
 Output message.
 
 ## Motivation
 
-I wanted to persist a log message on the REPL but it seems like there's a bunch of weird tricks to simply append a new log entry keeping the line clean at the same time, that's why I came up with this module. 
+I wanted to persist a log message on the REPL but this is not trivial. There's a bunch of weird tricks to simply append a new log entry and keeping the output clean at the same time.  
+This module abstracts all these small gotchas so you can focus on what really matters. 
 
 ## License
 
