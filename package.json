@@ -1,14 +1,11 @@
 {
-  "name": "print",
+  "name": "write.js",
   "version": "1.0.0",
-  "description": "Normalized standard output that works on both Node.js and PhantomJS environments.",
+  "description": "Normalized `stdout.write()` that works on both Node.js and PhantomJS.",
   "main": "index.js",
-  "scripts": {
-    "test": "tape test.js"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafaelrinaldi/print.git"
+    "url": "git+https://github.com/rafaelrinaldi/write.js.git"
   },
   "keywords": [
     "print",
@@ -22,12 +19,8 @@
   "author": "Rafael Rinaldi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rafaelrinaldi/print/issues"
+    "url": "https://github.com/rafaelrinaldi/write.js/issues"
   },
-  "homepage": "https://github.com/rafaelrinaldi/print#readme",
-  "devDependencies": {
-    "intercept-stdout": "^0.1.2",
-    "phantomjs": "^1.9.17",
-    "tape": "^4.0.1"
-  }
+  "homepage": "https://github.com/rafaelrinaldi/write.js#readme",
+  "devDependencies": {}
 }
