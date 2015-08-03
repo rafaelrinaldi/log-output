@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/rafaelrinaldi/print#readme",
   "devDependencies": {
+    "intercept-stdout": "^0.1.2",
+    "phantomjs": "^1.9.17",
     "tape": "^4.0.1"
   }
 }

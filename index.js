@@ -1,12 +1,12 @@
 'use strict';
 
 var isNode = 'process' in global;
-var print;
+var write;
 
 if(isNode) {
-  print = require('./node');
+  write = require('./src/node');
 } else {
-  print = require('./phantom');
+  write = require('./src/phantom');
 }
 
-module.exports = print;
+module.exports = write;
