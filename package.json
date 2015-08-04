@@ -1,6 +1,6 @@
 {
   "name": "write.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Normalized `stdout.write()` that works on both Node.js and PhantomJS.",
   "main": "index.js",
   "repository": {
