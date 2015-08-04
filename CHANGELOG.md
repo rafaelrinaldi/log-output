@@ -1,3 +1,7 @@
+# v1.0.2 (2015/08/04)
+
+* Improved docs.
+
 # v1.0.1 (2015/08/03)
 
 * Improved docs.
