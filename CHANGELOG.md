@@ -1,3 +1,7 @@
+# v2.0.1 (2015/08/16)
+
+* Removed default stream value of `process.stdout` to avoid issues when `process` is not available.
+
 # v2.0.0 (2015/08/16)
 
 * Completely changed the API.
