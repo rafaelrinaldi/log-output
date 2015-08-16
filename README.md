@@ -92,9 +92,7 @@ I wanted to visually persist log messages on the command line. Turns out this ca
 ### Thoughts on `log-update`
 
 [`log-update`](http://github.com/sindresorhus/log-update) is essentially the same idea of `log-output` but it was released later and has no support for stream adapters.   
-Adapters support was one of the reasons I've created this module in the first place. I needed a way to persis the log messages within a PhantomJS instance.
-
-The new `log-output` API was very much inspired by `log-update`'s API.
+Adapters support was one of the reasons I've created this module in the first place. I needed a way to persist the log messages within a PhantomJS instance.
 
 ## License
 
