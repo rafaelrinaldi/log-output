@@ -1,3 +1,10 @@
+# v2.0.0 (2015/08/16)
+
+* Completely changed the API.
+* RIP `write.js` long live `log-output`.
+* Added support for adapters.
+* Added support for custom streams.
+
 # v1.0.2 (2015/08/04)
 
 * Improved docs.
