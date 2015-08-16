@@ -37,7 +37,6 @@ Output message.
 ## `logOutput.stream()`
 
 Type: `Stream object`  
-Default: `process.stdout`
 
 Specify a stream to output.
 
