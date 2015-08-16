@@ -1,7 +1,7 @@
 'use strict';
 
 function logOutput(message) {
-  var currentStream = process.stdout;
+  var currentStream;
   var writableStream;
 
   var render = function() {
