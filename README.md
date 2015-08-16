@@ -1,30 +1,100 @@
-# write.js
+# log-output [![Build Status](https://travis-ci.org/rafaelrinaldi/log-output.svg?branch=master)](https://travis-ci.org/rafaelrinaldi/log-output)
 
-> Normalized `stdout.write()` that works on both Node.js and PhantomJS.
+> Persist log messages on the command line.
+
+<sub>Formerly **write.js**.</sub>
 
 ## Install
 
 ```sh
-$ npm install --save write.js
+$ npm install --save log-output
+```
+
+## Usage
+
+```javascript
+var logOutput = require('log-output');
+var frames = 'lorem ipsum dolor sit'.split(' ');
+var frame = 0;
+
+setInterval(function() {
+  frame = frames[frame++ % frames.length];
+  logOutput(frames[frame]);
+}, 1000);
 ```
 
 ## API
 
-### `write(message)`
+## `logOutput(message)`
 
-#### `message`
+### `message`
 
 *Required*  
 Type: `string`  
 
 Output message.
 
+## `logOutput.stream()`
+
+Type: `Stream object`  
+Default: `process.stdout`
+
+Specify a stream to output.
+
+## `logOutput.adapter()`
+
+Specify a _writable stream_ interface, which is essentially an adapter.  
+
+The interface  **must implement** the following API:
+
+* `resetLine()` - Reset current output line
+* `newLine()` - Add a new output line
+* `resetCursor([position])` - Reset cursor position (`position` defaults to `0`)
+* `output(message)` - Output message
+
+Official adapters are:
+
+* [`log-output-node`](http://github.com/rafaelrinaldi/log-output-node) - [Node.js](http://nodejs.org) adapter. _This is the default adapter_.
+* [`log-output-phantom`](http://github.com/rafaelrinaldi/log-output-phantom) - [PhantomJS](http://phantomjs.org) adapter.
+
+You can specify your own:
+
+```javascript
+var logOutput = require('log-output');
+var customAdapter = function() {
+  // Assuming you have a custom stream with a non-standard interface
+  var stream = require('custom-stream');
+
+  return {
+    resetLine: function() {},
+    newLine: function() {},
+    resetCursor: function(position) {},
+    output: function() {}
+  }
+};
+
+logOutput.adapter(customAdapter);
+logOutput('yay'); // yay
+```
+
+## `logOutput.clear()`
+
+Shortcut to empty current output.
+
+## `logOutput.done()`
+
+Shortcut to output a new line.
+
 ## Motivation
 
-I wanted to persist a log message on both Node.js and PhantomJS REPL but I have discovered that this is not so trivial.
-There's a bunch of weird tricks to simply append a new log entry keeping the output clean at the same time.  
+I wanted to visually persist log messages on the command line. Turns out this can be a bit tricky, that's why I have created this module.
 
-This module abstracts all these small gotchas so you can focus on what really matters. 
+### Thoughts on `log-update`
+
+[`log-update`](http://github.com/sindresorhus/log-update) is essentially the same idea of `log-output` but it was released later and has no support for stream adapters.   
+Adapters support was one of the reasons I've created this module in the first place. I needed a way to persis the log messages within a PhantomJS instance.
+
+The new `log-output` API was very much inspired by `log-update`'s API.
 
 ## License
 

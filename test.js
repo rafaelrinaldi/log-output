@@ -1,11 +1,16 @@
 'use strict';
 
-/**
-* Ideas on how to test this:
-*
-* 1. Hook into `process.stdout.write`
-* 2. Shell out the test script to bash and inspect `stdout`: http://stackoverflow.com/a/637837/339827
-*/
+var logOutput = require('./');
+var frames = 'lorem ipsum dolor'.split(/\s/);
+var i = 0;
 
-var write = require('./');
-write('foo' + Math.random() * 42);
+var interval = setInterval(function() {
+  var frame = frames[i++ % frames.length];
+  logOutput(frame, 'foo', 'bar');
+}, 500);
+
+setTimeout(function() {
+  logOutput.done();
+  console.log('yay');
+  clearTimeout(interval);
+}, 5000);

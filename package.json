@@ -1,11 +1,14 @@
 {
-  "name": "write.js",
-  "version": "1.0.2",
-  "description": "Normalized `stdout.write()` that works on both Node.js and PhantomJS.",
+  "name": "log-output",
+  "version": "2.0.0",
+  "description": "Persist log messages on the command line.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafaelrinaldi/write.js.git"
+    "url": "git+https://github.com/rafaelrinaldi/log-output.git"
+  },
+  "scripts": {
+    "test": "node test.js"
   },
   "keywords": [
     "print",
@@ -13,14 +16,19 @@
     "message",
     "log",
     "stdout",
-    "standardoutput",
-    "write"
+    "stderr",
+    "stdio",
+    "write",
+    "output"
   ],
   "author": "Rafael Rinaldi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rafaelrinaldi/write.js/issues"
+    "url": "https://github.com/rafaelrinaldi/log-output/issues"
   },
-  "homepage": "https://github.com/rafaelrinaldi/write.js#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/rafaelrinaldi/log-output#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "log-output-node": "^1.0.0"
+  }
 }
