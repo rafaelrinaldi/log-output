@@ -1,6 +1,6 @@
 {
   "name": "log-output",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Persist log messages on the command line.",
   "main": "index.js",
   "repository": {
