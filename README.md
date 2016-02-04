@@ -1,4 +1,9 @@
-# log-output [![Build Status](https://travis-ci.org/rafaelrinaldi/log-output.svg?branch=master)](https://travis-ci.org/rafaelrinaldi/log-output)
+> # Deprecation notice :rotating_light:
+> I strongly suggest you to move to [`log-update`](https://github.com/sindresorhus/log-update) that came out a little after I first wrote this module.
+> It's really complete and making the switch should be really easy.
+> Also, [PhantomJS 2.1 has finally came out](http://phantomjs.org/release-2.1.html) solving the problems I was trying to work around with this module.
+
+# log-output ![Unmaintained Project](https://img.shields.io/badge/status-unmaintained-red.svg?style=flat-square)
 
 > Persist log messages on the command line.
 
